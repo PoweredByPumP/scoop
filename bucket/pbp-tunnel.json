@@ -1,0 +1,63 @@
+{
+    "version": "0.0.6",
+    "description": "pbp-tunnel is a lightweight Go client-server implementation of SSH-like port-forwarding. It relies on a semi-homemade communication protocol.",
+    "homepage": "https://github.com/PoweredByPumP/pbp-tunnel",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/0.0.6/pbp-tunnel-0.0.6.exe",
+            "hash": "57d2f6c4f7a9732b7c26d26299b585d36bf959216672913e0b480efc33a152ac"
+        },
+        "32bit": {
+            "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/0.0.6/pbp-tunnel-0.0.6.exe",
+            "hash": "57d2f6c4f7a9732b7c26d26299b585d36bf959216672913e0b480efc33a152ac"
+        },
+        "arm64": {
+            "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/0.0.6/pbp-tunnel-0.0.6-arm64.exe",
+            "hash": "872ecd89459647777edd114040f51a8b3bafe73aab699cfd0dc67e8e95f254c8"
+        }
+    },
+    "bin": {
+        "64bit": [
+            ["pbp-tunnel-0.0.6.exe", "pbp-tunnel.exe"]
+        ],
+        "32bit": [
+            ["pbp-tunnel-0.0.6.exe", "pbp-tunnel.exe"]
+        ],
+        "arm64": [
+            ["pbp-tunnel-0.0.6-arm64.exe", "pbp-tunnel.exe"]
+        ]
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/PoweredByPumP/pbp-tunnel/releases/latest",
+        "regex": "\"tag_name\":\\s*\"([\\d.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/$version/pbp-tunnel-$version.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/$version/pbp-tunnel-$version.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/$version/pbp-tunnel-$version-arm64.exe"
+            }
+        },
+        "bin": {
+            "64bit": [
+                ["pbp-tunnel-$version.exe", "pbp-tunnel.exe"]
+            ],
+            "32bit": [
+                ["pbp-tunnel-$version.exe", "pbp-tunnel.exe"]
+            ],
+            "arm64": [
+                ["pbp-tunnel-$version-arm64.exe", "pbp-tunnel.exe"]
+            ]
+        },
+        "hash": {
+            "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/$version/pbp-tunnel-$version.exe.sha256",
+            "regex": "([a-fA-F0-9]{64})"
+        }
+    }
+}
