@@ -19,7 +19,11 @@
     },
     "installer": {
         "script": [
-            "Rename-Item \"$dir\\pbp-tunnel-*.exe\" \"pbp-tunnel.exe\" -Force"
+            "Push-Location \"$dir\"",
+            "$exe = Get-ChildItem -Path . -Filter 'pbp-tunnel-*.exe' | Select-Object -First 1",
+            "if (-not $exe) { throw 'pbp-tunnel executable not found!' }",
+            "Rename-Item -Path $exe.FullName -NewName 'pbp-tunnel.exe' -Force",
+            "Pop-Location"
         ]
     },
     "bin": "pbp-tunnel.exe",
