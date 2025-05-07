@@ -1,16 +1,16 @@
 {
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "pbp-tunnel is a lightweight Go client-server implementation of SSH-like port-forwarding. It relies on a semi-homemade communication protocol.",
     "homepage": "https://github.com/PoweredByPumP/pbp-tunnel",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/0.0.7/pbp-tunnel-0.0.7.exe",
-            "hash": "bcee2aa4361f7931bac19e82075c4904208c51aad5db94fd73175bf2e667408d"
+            "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/0.0.8/pbp-tunnel-0.0.8.exe",
+            "hash": "bb1ae97b2c2566c0fec7259577673b997623a7e7d6b168c9c805293a47acb7dd"
         },
         "arm64": {
-            "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/0.0.7/pbp-tunnel-0.0.7-arm64.exe",
-            "hash": "7aaa7e9ba7b102048f8fee31fe622258e85de2c6599f2d8a7bc62cfc18738f07"
+            "url": "https://github.com/PoweredByPumP/pbp-tunnel/releases/download/0.0.8/pbp-tunnel-0.0.8-arm64.exe",
+            "hash": "96accd194635069cc47302bbb61a71f3799411df4ddfd49158b6bbcb854404df"
         }
     },
     "installer": {
